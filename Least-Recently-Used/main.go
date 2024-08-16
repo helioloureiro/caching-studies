@@ -44,7 +44,7 @@ type LRUCache struct {
 }
 
 // Constructor initializes a new LRUCache.
-func Constructor(capacity int) LRUCache {
+func New(capacity int) LRUCache {
 	return LRUCache{
 		cap: capacity,
 		l:   new(list.List),
@@ -65,7 +65,7 @@ func (c *LRUCache) Get(key int) int {
 }
 
 // Put key and value in the LRUCache
-func (c *LRUCache) Put(key int, value int) {
+func (c *LRUCache) Set(key int, value int) {
 	// check if list node exists
 	if node, ok := c.m[key]; ok {
 		// move the node to front
