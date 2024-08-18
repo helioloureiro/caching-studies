@@ -1,4 +1,4 @@
-BIN := fifo
+BIN := fifose
 
 all: test $(BIN)
 
